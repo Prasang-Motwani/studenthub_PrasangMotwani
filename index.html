@@ -2,6 +2,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
     <title>StudentHub</title>
     <link rel="stylesheet" href="style.css">
@@ -11,18 +12,61 @@
     <nav>
         <h1><img src = "sh_logo.png" class = "logo"></h1>
         <ul>
-            <li>Home</li>
-            <li>Dashboard</li>
-            <li>About</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Dashboard</a></li>
+            <li><a href="#about">About</a></li>
         </ul>
     </nav>
 
-    <section class="hero">
+    <section id="home" class="hero">
         <h1>Welcome to StudentHub</h1>
         <p>Your personal productivity hub for student life.</p>
         <p>Manage everything you need in one place</p>
         <button>Get Started</button>
     </section>
+
+    <section id="features" class="features">
+
+        <h2>Why StudentHub?</h2>
+
+        <div class="feature-container">
+
+            <div class="card">
+                 <img src = "cal_logo.png" class = "cal_logo">
+                <h3>Timetable</h3>
+                <p>Keep track of assignments and deadlines easily.</p>
+            </div>
+
+            <div class="card">
+                <img src = "tracker_logo2.png" class = "tracker_logo">
+                <h3> Tracker</h3>
+                <p>Monitor your academic performance and growth.</p>
+            </div>
+
+            <div class="card">
+                <img src = "reminder_logo.png" class = "reminder_logo">
+                <h3>Reminders</h3>
+                <p>Never miss important submissions and events.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="about" class="about">
+    <h2>About StudentHub</h2>
+    <p>
+        StudentHub helps students manage academics, deadlines,
+        performance tracking, and important reminders all in one place.
+    </p>
+    </section>
+
+
+    <footer>
+    <p>StudentHub | Built by Prasang Motwani | MIT Manipal</p>
+    </footer>
+
+
 
 </body>
 </html>
