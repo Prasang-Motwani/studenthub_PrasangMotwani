@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
     <title>StudentHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,164 +13,264 @@
    
 
 
-<nav>
-    <div class="logo-area">
-        <div class="logo-circle">SH</div>
-        <h2>StudentHub</h2>
+
+<nav class="sticky top-0 z-50 flex flex-col md:flex-row items-center justify-between px-6 md:px-10 py-5 bg-slate-950 border-b border-slate-800">
+
+    <div class="flex items-center gap-4">
+
+        <div class="w-12 h-12 rounded-full bg-cyan-400 flex items-center justify-center font-bold text-black">
+            SH
+        </div>
+
+        <h2 class="text-3xl font-bold">
+            StudentHub
+        </h2>
+
     </div>
 
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#dashboard">Dashboard</a></li>
-        <li><a href="#about">About</a></li>
+    <ul class="flex flex-col md:flex-row gap-5 md:gap-12">
+
+        <li>
+            <a href="#home" class="font-semibold text-slate-300 hover:text-cyan-400 transition">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="#dashboard" class="font-semibold text-slate-300 hover:text-cyan-400 transition">
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="#about" class="font-semibold text-slate-300 hover:text-cyan-400 transition">
+                About
+            </a>
+        </li>
+
     </ul>
 
-   <div class="nav-right">
-    <button id="themeToggle">🌙</button>
-    <a href="#dashboard" class="nav-btn">Dashboard →</a>
-</div>
+    <div class="flex items-center gap-5">
+
+        <button
+            id="themeToggle"
+            class="w-12 h-12 rounded-full bg-slate-800 hover:bg-slate-700 transition">
+            🌙
+        </button>
+
+        <a
+            href="#dashboard"
+            class="bg-cyan-400 text-black font-bold px-7 py-3 rounded-full hover:scale-105 transition">
+            Dashboard →
+        </a>
+
+    </div>
+
 </nav>
 
-<section id="home" class="hero">
+<section
+id="home"
+class="min-h-screen flex flex-col justify-center items-center text-center px-5 py-24 bg-[linear-gradient(rgba(15,23,42,0.85),rgba(15,23,42,0.95)),url('hero_bg2.jpg')] bg-cover bg-center">
 
-    <div class="hero-badge">
+    <div
+    class="text-cyan-400 border border-white/20 rounded-full px-6 py-3 mb-9">
         ● Your personal productivity hub
     </div>
 
-    <h1>
+    <h1 class="text-5xl md:text-7xl font-bold max-w-6xl leading-tight mb-8">
         Your academic life,<br>
-        <span>organised.</span>
+        <span class="text-cyan-400">organised.</span>
     </h1>
 
-    <p>
+    <p class="max-w-4xl text-slate-400 text-2xl leading-9 mb-10">
         StudentHub is your personal productivity hub —
         timetables, progress tracking, and smart reminders,
         all in one clean space.
     </p>
 
-    <div class="hero-buttons">
-        <a href="#dashboard" class="primary-btn">
-    Open Dashboard →
-</a>
-        <a href="#features" class = "secondary-btn">See Features</a>
+    <div class="flex flex-col md:flex-row gap-6 md:gap-8 mt-10">
+
+        <a
+        href="#dashboard"
+        class="bg-cyan-400 text-black font-bold px-10 py-5 rounded-full border border-white/10 hover:-translate-y-1 transition">
+            Open Dashboard →
+        </a>
+
+        <a
+        href="#features"
+        class="border-2 border-white/20 text-slate-400 px-10 py-5 rounded-full font-semibold hover:border-cyan-400 hover:text-cyan-400 transition">
+            See Features
+        </a>
+
     </div>
 
 </section>
 
-<section id="features" class="features">
+<section
+id="features"
+class="py-32 px-16 bg-slate-900">
 
-    <p class="section-tag">FEATURES</p>
+   <p class="text-cyan-400 tracking-[0.2em] mb-4">FEATURES</p>
 
-    <h2>Why StudentHub?</h2>
+   <h2 class="text-4xl md:text-6xl font-bold mb-6">Why StudentHub?</h2>
 
-    <p class="section-description">
+    <p class="text-slate-400 text-xl max-w-4xl">
         Everything you need to stay on top of your student life,
         built into one focused tool.
     </p>
 
-    <div class="feature-container">
+    <div class="flex flex-col lg:flex-row gap-8 mt-20">
 
-        <div class="card">
-            <p class="card-tag">SCHEDULE</p>
-            <img src="cal_logo.png">
-            <h3>Timetable</h3>
-            <p>
-                Keep track of assignments and deadlines.
-                Never lose sight of what needs to be done.
-            </p>
+        <div class="flex-1 min-w-[300px] bg-slate-800 rounded-3xl border border-white/10 p-10 hover:-translate-y-2 transition">
+            <p class="text-cyan-400 tracking-[0.2em] text-sm mb-8">
+    SCHEDULE
+</p>
+
+<img class="w-24 mb-8" src="cal_logo.png">
+
+<h3 class="text-3xl font-bold mb-5">
+    Timetable
+</h3>
+
+<p class="text-slate-400 leading-8">
+    Keep track of assignments and deadlines.
+    Never lose sight of what needs to be done.
+</p>
         </div>
 
-        <div class="card">
-            <p class="card-tag">ANALYTICS</p>
-            <img src="tracker_logo2.png">
-            <h3>Tracker</h3>
-            <p>
-                Monitor academic performance and growth
-                across subjects in real time.
-            </p>
+        <div class="flex-1 min-w-[300px] bg-slate-800 rounded-3xl border border-white/10 p-10 hover:-translate-y-2 transition">
+           <p class="text-cyan-400 tracking-[0.2em] text-sm mb-8">
+    ANALYTICS
+</p>
+
+<img class="w-24 mb-8" src="tracker_logo2.png">
+
+<h3 class="text-3xl font-bold mb-5">
+    Tracker
+</h3>
+
+<p class="text-slate-400 leading-8">
+    Monitor academic performance and growth
+    across subjects in real time.
+</p>
         </div>
 
-        <div class="card">
-            <p class="card-tag">ALERTS</p>
-            <img src="reminder_logo.png">
-            <h3>Reminders</h3>
-            <p>
-                Smart reminders so you never miss a
-                submission, exam or important event.
-            </p>
+        <div class="flex-1 min-w-[300px] bg-slate-800 rounded-3xl border border-white/10 p-10 hover:-translate-y-2 transition">
+           <p class="text-cyan-400 tracking-[0.2em] text-sm mb-8">
+    ALERTS
+</p>
+
+<img class="w-24 mb-8" src="reminder_logo.png">
+
+<h3 class="text-3xl font-bold mb-5">
+    Reminders
+</h3>
+
+<p class="text-slate-400 leading-8">
+    Smart reminders so you never miss a
+    submission, exam or important event.
+</p>
         </div>
 
     </div>
 
 </section>
 
-<section id="dashboard" class="dashboard">
+<section
+id="dashboard"
+class="py-32 px-16">
 
-    <p class="section-tag">DASHBOARD</p>
+    <p class="text-cyan-400 tracking-[0.2em] mb-4">DASHBOARD</p>
 
-    <h2>Your Workspace</h2>
+   <h2 class="text-4xl md:text-6xl font-bold mb-6">
+    Your Workspace
+</h2>
 
-    <p class="section-description">
+<p class="text-slate-400 text-xl max-w-4xl mb-16">
         Tasks and notes are saved automatically and persist
         across refreshes.
     </p>
 
-   <div class="dashboard-card weather-card">
+   <div class="bg-slate-800 border border-white/10 rounded-3xl p-10 mb-10">
+    <h3 class="text-2xl font-bold mb-4">🌤 Live Weather</h3>
 
-    <h3>🌤 Live Weather</h3>
+    <h2
+id="temperature"
+class="text-7xl font-bold mb-4">--°C</h2>
 
-    <h2 id="temperature">--°C</h2>
-
-    <p id="weatherStatus">
+    <p
+id="weatherStatus"
+class="text-slate-400 text-lg">
         Loading weather...
     </p>
 
 </div>
 
-    <div class="dashboard-grid">
+   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-        <div class="dashboard-card">
+        <div class="bg-slate-800 border border-white/10 rounded-3xl p-9 min-h-[350px]">
 
-    <h3>Task Manager</h3>
+    <h3 class="text-2xl font-bold mb-4">Task Manager</h3>
 
-    <div class="task-input-area">
+    <div class="flex gap-3 mt-5">
 
-        <input
-            type="text"
-            id="taskInput"
-            placeholder="Add a new task..."
-        >
+       <input
+type="text"
+id="taskInput"
+placeholder="Add a new task..."
+class="flex-1 p-4 rounded-xl bg-slate-700 text-white outline-none">
 
-        <button id="addTaskBtn">
-            +
-        </button>
+        <button
+id="addTaskBtn"
+class="w-14 rounded-xl bg-cyan-400 text-black text-3xl font-bold hover:scale-105 transition">
++
+</button>
 
     </div>
 
-    <ul id="taskList"></ul>
+    <ul
+    id="taskList"
+    class="mt-5 space-y-3">
+</ul>
 
 </div>
 
-        <div class="dashboard-card">
-            <h3>Sticky Notes</h3>
-            <p>Create notes and keep them available after refresh.</p>
-            <textarea
-    id="stickyNote"
-    placeholder="Write your notes here..."
-></textarea>
-        </div>
+<div class="bg-slate-800 border border-white/10 rounded-3xl p-9 min-h-[350px]">
+
+    <h3 class="text-2xl font-bold mb-4">
+        Sticky Notes
+    </h3>
+
+    <p class="text-slate-400">
+        Create notes and keep them available after refresh.
+    </p>
+
+    <textarea
+        id="stickyNote"
+        placeholder="Write your notes here..."
+        class="w-full h-56 mt-5 bg-slate-700 rounded-xl p-4 text-white resize-none outline-none focus:ring-2 focus:ring-cyan-400"
+    ></textarea>
+
+</div>
 
     </div>
 
 </section>
 
-<section id="about" class="about">
+<section
+id="about"
+class="py-36 px-5 text-center">
 
-    <p class="section-tag">ABOUT</p>
+    <p class="text-cyan-400 tracking-[0.2em] mb-4">
+        ABOUT
+    </p>
 
-    <h2>About StudentHub</h2>
+    <h2 class="text-4xl md:text-6xl font-bold mb-8">
+        About StudentHub
+    </h2>
 
-    <p>
+    <p
+    class="max-w-5xl mx-auto text-slate-400 text-2xl leading-9">
         StudentHub helps students manage academics,
         deadlines, performance tracking and important
         reminders — all in one place.
@@ -177,16 +278,28 @@
 
 </section>
 
-<footer>
+<footer
+class="border-t border-white/10 bg-slate-950 py-10 px-8 flex flex-col md:flex-row justify-between items-center gap-6">
 
-    <div class="footer-left">
-        <div class="logo-circle">SH</div>
-        <h3>StudentHub</h3>
+    <div class="flex items-center gap-4">
+
+        <div class="w-12 h-12 rounded-full bg-cyan-400 flex items-center justify-center font-bold text-black">
+            SH
+        </div>
+
+        <h3 class="text-2xl font-bold">
+            StudentHub
+        </h3>
+
     </div>
 
-    <p>Built by Prasang Motwani</p>
+    <p class="text-slate-400">
+        Built by Prasang Motwani
+    </p>
 
-    <p>MIT Manipal</p>
+    <p class="text-slate-400">
+        MIT Manipal
+    </p>
 
 </footer>
 

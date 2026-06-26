@@ -28,6 +28,9 @@ function addTask() {
 
     const li = document.createElement("li");
 
+    li.className =
+"bg-slate-700 rounded-xl p-4 flex justify-between items-center";
+
     li.innerHTML = `
         ${taskText}
         <button class="delete-btn">Delete</button>
@@ -41,6 +44,9 @@ function addTask() {
 
     const deleteBtn = li.querySelector(".delete-btn");
 
+    deleteBtn.className =
+"bg-red-500 text-white px-3 py-2 rounded-lg hover:bg-red-600 transition";
+
     deleteBtn.addEventListener("click", function(){
         li.remove();
         saveTasks();
@@ -53,10 +59,15 @@ const savedTasks =
 
     const li = document.createElement("li");
 
+    li.className =
+"bg-slate-700 rounded-xl p-4 flex justify-between items-center";
+
     li.textContent = taskText;
 
     const deleteBtn = document.createElement("button");
-    deleteBtn.classList.add("delete-btn");
+
+deleteBtn.className =
+"bg-red-500 text-white px-3 py-2 rounded-lg hover:bg-red-600 transition";
 
     deleteBtn.textContent = "Delete";
 
